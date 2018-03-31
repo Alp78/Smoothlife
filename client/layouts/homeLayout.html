@@ -1,0 +1,43 @@
+<!--affichage par defaut de la page web-->
+<template name='homeLayout'>
+	<header class="logo">
+		<img src="img/smoothlife_logo.jpg" class="logoImg">
+		<br>
+		<!--connection de l'utilisateur-->
+		{{> loginButtons}}
+	</header>
+	<main>
+		<div>
+		<!--l'utilisateur doit se connecter pour voir ce qui suit-->
+		{{#if currentUser}}
+			<br><br>
+			<table>
+			<!--affiche des différetns éléments cliquables par l'utilisateur afin de naviguer sur le site-->
+				<tr class="smoothieOrderTr">
+					<td class="smoothieOrderTd"></td>
+					<td class="smoothieOrderTd">
+						<a href="/make"><button class="homeButtonA">MAKE</button></a>
+					</td>
+					<td class="smoothieOrderTd">
+						<a href="/menu"><button class="homeButtonA">MENU</button></a>
+					</td>
+					<td class="smoothieOrderTd"></td>
+				</tr>
+				<tr class="smoothieOrderTr">
+					<td class="smoothieOrderTd"></td>
+					<td class="smoothieOrderTd">
+						<a href="/ingredient"><button class="homeButtonB">INGREDIENTS</button></a>
+					</td>
+					<td class="smoothieOrderTd">
+						<a href="/smoothies"><button class="homeButtonB">SMOOTHIES</button></a>
+					</td>
+					<td class="smoothieOrderTd"></td>
+				</tr>
+			</table>
+			<!--permet à l'utilisateur de se connecter-->
+		{{else}}
+		<p class="logo">Please Sign in or Create account.</p>
+		{{/if}}
+		</div>
+	</main>
+</template>

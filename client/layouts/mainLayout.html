@@ -1,0 +1,17 @@
+<template name='mainLayout'>
+	<header>
+	<div class="tableContainer">
+	<ul class="navigation">
+ 		<li><a href="/">HOME</a></li>
+  		<li><a href="/make">MAKE</a></li>
+  		<li><a href="/menu">MENU</a></li>
+  		<li><a href="/orders">ORDERS</a></li>
+  		<li><a href="/ingredient">INGREDIENTS</a></li>
+  		<li><a href="/smoothies">SMOOTHIES</a></li>
+	</ul>
+	</div>
+	</header>
+	<main>
+		{{> Template.dynamic template=main}}
+	</main>
+</template>
